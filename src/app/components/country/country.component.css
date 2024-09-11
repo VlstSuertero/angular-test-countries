@@ -6,6 +6,10 @@
 h1 {
   margin-left: 1rem;
 }
+.button_home {
+  margin: 1rem;
+  width: 10rem;
+}
 .buttons_years {
   margin-left: 1rem;
 }

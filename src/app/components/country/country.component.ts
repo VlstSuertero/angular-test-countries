@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { AppService } from '../../services/app.service';
 import { Subject, takeUntil } from 'rxjs';
 
@@ -17,7 +17,8 @@ export class CountryComponent implements OnInit, OnDestroy {
 
   constructor(
     private service: AppService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -49,5 +50,9 @@ export class CountryComponent implements OnInit, OnDestroy {
       .subscribe((data) => {
         this.holidays = data;
       });
+  }
+
+  redirectToHome(): void {
+    this.router.navigate(['/']);
   }
 }
