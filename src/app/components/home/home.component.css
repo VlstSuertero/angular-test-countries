@@ -1,0 +1,35 @@
+.container {
+  padding: 2rem;
+  display: flex;
+}
+
+mat-card {
+  padding-left: 2rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+
+.example-form-field {
+  width: 25rem;
+}
+
+.country_list {
+  width: 25rem;
+}
+
+#countries:hover {
+  cursor: pointer;
+  background: darkgrey;
+}
+
+.random_countries {
+  padding-left: 2rem;
+}
+.random_countries h2 {
+  font-size: 1.5rem;
+}
+
+.random_holidays {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}

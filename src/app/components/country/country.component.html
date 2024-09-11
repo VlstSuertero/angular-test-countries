@@ -1,0 +1,19 @@
+<div class="container">
+  <mat-card>
+    <h1>Holidays for {{ countryName }}</h1>
+    <div class="buttons_years">
+      <button
+        mat-raised-button
+        *ngFor="let year of years"
+        (click)="switchToYear(year)"
+      >
+        {{ year }}
+      </button>
+    </div>
+    <mat-list>
+      <mat-list-item *ngFor="let holiday of holidays">
+        {{ holiday.name }} - {{ holiday.date }}
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>

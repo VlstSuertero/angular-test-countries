@@ -1,0 +1,48 @@
+<div class="container">
+  <mat-card>
+    <mat-form-field class="example-form-field">
+      <mat-label>Country Search</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="searchQuery"
+        (input)="searchCountries()"
+        placeholder="Search country"
+      />
+      @if (searchQuery) {
+        <button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="searchQuery = ''"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+
+    <mat-list role="list" *ngIf="countries.length" class="country_list">
+      <mat-list-item
+        id="countries"
+        role="listitem"
+        *ngFor="let country of countries"
+        (click)="selectCountry(country)"
+      >
+        {{ country.name }}
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="random_countries">
+    <h2>Random Countries & Holidays</h2>
+    <mat-card-content
+      *ngFor="let randomCountry of randomCountries"
+      class="random_holidays"
+    >
+      <p>
+        {{ randomCountry.countryName }} - Next Holiday:
+        {{ randomCountry.holidayName }} on {{ randomCountry.date }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

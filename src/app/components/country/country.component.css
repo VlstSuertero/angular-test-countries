@@ -1,0 +1,14 @@
+.container {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 2rem;
+}
+h1 {
+  margin-left: 1rem;
+}
+.buttons_years {
+  margin-left: 1rem;
+}
+button {
+  margin-right: 1.25rem;
+}
